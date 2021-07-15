@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import { Movie } from 'src/entities/movie.entity';
+import { Movie } from '../entities/movie.entity';
 
 @Injectable()
 export class MoviesService {
