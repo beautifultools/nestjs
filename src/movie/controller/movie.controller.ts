@@ -1,10 +1,10 @@
 import { Controller, Get } from '@nestjs/common';
-import { MoviesService } from '../service/movies.service';
+import { MovieService } from '../service/movie.service';
 import { Movie } from '../entities/movie.entity';
 
 @Controller('movies')
-export class MoviesController {
-  constructor(private readonly moviesService: MoviesService) {}
+export class MovieController {
+  constructor(private readonly moviesService: MovieService) {}
 
   @Get()
   getAll(): Movie[] {
