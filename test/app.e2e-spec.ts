@@ -39,5 +39,26 @@ describe('AppController (e2e)', () => {
         .expect(200)
         .expect(true);
     });
+
+    it('DELETE', () => {
+      return request(app.getHttpServer())
+        .delete('/movies')
+        .send({
+          id: 1,
+        })
+        .expect(200)
+        .expect(true);
+    });
+
+    it('PATCH', () => {
+      return request(app.getHttpServer())
+        .delete('/movies')
+        .send({
+          id: 1,
+          title: 'Hello',
+        })
+        .expect(200)
+        .expect(true);
+    });
   });
 });
